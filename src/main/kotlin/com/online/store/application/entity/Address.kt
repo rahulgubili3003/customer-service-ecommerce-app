@@ -33,7 +33,7 @@ data class Address(
     val streetOne: String,
 
     @Column(name = "street_2")
-    val streetTwo: String,
+    val streetTwo: String = "",
 
     @Column(name = "city", nullable = false)
     val city: String,

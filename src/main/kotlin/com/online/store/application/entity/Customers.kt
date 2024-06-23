@@ -30,6 +30,13 @@ data class Customers(
     @Column(unique = true, updatable = false, nullable = false)
     val id: Long? = null,
 
+    @Column(name = "customer_id", nullable = false, updatable = false, unique = true)
+    val customerId: String,
+
+    @Column(name = "password", nullable = false)
+    @NotBlank
+    val password: String,
+
     @Column(name = "first_name", nullable = false)
     @NotBlank(message = "First Name cannot be Blank. Must Contain at least one non whitespace char")
     val firstName: String,
